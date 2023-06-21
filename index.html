@@ -1,33 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alt Media</title>
-    <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/coming-soon.css">
-    <link rel="shortcut icon" href="./images/alt-media-logo.png" type="image/x-icon">
-</head>
-<body>
-    <nav>
-        <div class="container">
-            <div class="flex-div">
-                <img src="./images/alt-media-logo.png" alt="Alt Media" class="logo-img" />
-                <ul class="nav-list">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Agency, Advertisng, Digital, Alt Media, Media">
+        <meta name="description" content="Your Gateway to Effective Advertising">
+        <link rel="shortcut icon" href="./images/alt-media-logo.png" type="image/x-icon">
+        <title>Alt Media</title>
+        <link rel="stylesheet" href="./css/materialize.css">
+        <link rel="stylesheet" href="./css/fonts.css">
+        <link rel="stylesheet" href="./css/navbar.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div id="nav-main-wrapper">
+            <nav class="main-nav">
+              <div class="container full-height">
+                <div class="nav-wrapper">
+                  <a href="#" class="brand-logo" onclick="scrollToTop()">
+                    <img src="./images/alt-media-logo.png" alt="Alt Media" class="logo">
+                  </a>
+        
+                  <ul id="nav-mobile-2" class="dn-mobile ul-nav">
                     <li>
-                        <a href="mailto:info@altmedia.ng" class="nav-link">Contact Us</a>
+                      <a href="#" data-target="slide-out" class="sidenav-trigger sec-color right">
+                        <img src="./images/menu.svg" alt="menu" class="white-img">
+                      </a>
+                    </li>
+                  </ul>
+        
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="#home">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <span>About Us</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services">
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#why-choose-us">
+                            <span>Why Choose Us</span>
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+        
+            <ul id="slide-out" class="sidenav">
+                <div class="sidenav-logo">
+                    <a href="#" class="sidenav-close" onclick="scrollToTop()">
+                        <img src="./images/alt-media-logo.png" alt="Alt Media" class="logo">
+                    </a>
+                </div>
+                <ul class="sidenav-flex">
+                    <li>
+                        <a href="#home">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <span>About Us</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services">
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#why-choose-us">
+                            <span>Why Choose Us</span>
+                        </a>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <section class="wrapper">
+            </ul>
+          </div>
+
+          <main></main>
+
+          <footer>
             <div class="container">
-                <img src="./images/under-construction.jpg" alt="under-construction" class="under-construction-img">
+                <div class="footer-contents-wrapper flex-div justify-content-btw">
+                    <div class="footer-logo-side">
+                        <a href="">
+                            <img src="./images/alt-media-logo.png" alt="Alt Media" class="footer-logo">
+                        </a>
+                    </div>
+                    <div class="footer-links-side">
+                        <h4 class="footer-title">Contact Us</h4>
+                        <ul>
+                            <li>
+                                <a href="mailto:info@altmedia.com" class="flex-div">
+                                    <img src="./images/email.svg" alt="email">
+                                    <span>info@altmedia.com</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+2348137095349" class="flex-div">
+                                    <img src="./images/call.svg" alt="call">
+                                    <span>0813 709 5349</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="copyright-wrapper center">
+                    Copyright &copy; <span id="copyrightYear">2023</span> Alt Media. All Rights Reserved.
+                </div>
             </div>
-        </section>
-    </main>
-    
-</body>
+          </footer>
+        
+
+        <script src="./js/materialize.min.js"></script>
+        <script src="./js/jquery.min.js"></script>
+        
+        <script>
+            $(window).scroll(function () {
+                $('nav.main-nav').toggleClass('scrolled-nav', $(this).scrollTop() > 50)
+            })
+            var scrollToTop = function() {
+                window.scrollTo(0, 0)
+            }
+            var copyrightYear = new Date().getFullYear();
+            document.querySelector("#copyrightYear").innerText = copyrightYear;
+        </script>
+    </body>
 </html>

@@ -24,11 +24,11 @@ html {
 	border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-	background: rgba(12, 157, 145, 0.9);
+	background: rgba(242, 96, 0, 0.9);
 	border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: rgba(12, 157, 145, 0.4);
+	background: rgba(242, 96, 0, 0.4);
 }
 
 body {
@@ -180,7 +180,6 @@ body .container {
 
 main {
     min-height: 80vh;
-    background-color: rebeccapurple;
 }
 
 footer {

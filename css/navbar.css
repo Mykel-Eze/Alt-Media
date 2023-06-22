@@ -108,9 +108,9 @@ nav.main-nav{
   .colored-img {
     display: none;
   }
-  nav.scrolled-nav .white-img {
+  /* nav.scrolled-nav .white-img {
     display: none;
-  }
+  } */
   nav.scrolled-nav .colored-img {
     display: initial;
   }
@@ -347,18 +347,13 @@ nav.main-nav{
         padding: 0;
     }
   }
-  @media (max-width: 360px) {
-    a.brand-logo img {
-        width: 80%;
-    }
-  }
   @media (max-width: 320px) {
     ul#nav-mobile-2 button.nav-pry-btn-2.btn {
         display: none;
     }
-    a.brand-logo img {
+    /* a.brand-logo img {
         width: 70%;
-    }
+    } */
     .sidenav li:not(.contact-us-li) a {
         background: transparent !important;
         font-size: 30px;

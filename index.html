@@ -7,10 +7,12 @@
         <meta name="description" content="Your Gateway to Effective Advertising">
         <link rel="shortcut icon" href="./images/alt-media-logo.png" type="image/x-icon">
         <title>Alt Media</title>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/materialize.css">
         <link rel="stylesheet" href="./css/fonts.css">
-        <link rel="stylesheet" href="./css/navbar.css">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/navbar.css">
+        <link rel="stylesheet" href="./css/home.css">
     </head>
     <body>
         <div id="nav-main-wrapper">
@@ -86,7 +88,65 @@
             </ul>
           </div>
 
-          <main></main>
+          <main>
+            <section id="home">
+                <div class="row">
+                    <div class="container">
+                        <div class="home-text-side">
+                            <h1 class="home-title" data-aos="fade-up">
+                                Welcome to Alt Media
+                            </h1>
+                            <h4 class="home-title-desc" data-aos="fade-up" data-aos-duration="1500">
+                                Your Gateway to Effective Advertising
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="home-desc">
+                <div class="row">
+                    <div class="container">
+                        <p class="home-desc-txt center" data-aos="fade-up">
+                            At Alt Media, we believe that advertising is more than just grabbing attention; it's
+                            about creating lasting connections. We specialize in delivering innovative and tailored
+                            advertising solutions that help businesses like yours reach new heights of success. With
+                            our strategic approach and creative expertise, we'll amplify your brand's message and
+                            captivate your target audience. Explore our services and let us take your advertising
+                            campaigns to the next level.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="row">
+                    <div class="container">
+                        <div class="grid-wrapper">
+                            <div class="img-side" data-aos="zoom-in">
+                                <img src="./images/advert-vector.jpg" alt="advert" class="about-img">
+                            </div>
+                            <div class="txt-side">
+                                <h4 class="section-title">Empowering Brands, <br> Connecting Audiences</h4>
+                                <p class="section-desc">
+                                    At Alt Media, we're passionate about helping brands succeed. With a team of
+                                    experienced professionals and a deep understanding of the advertising landscape,
+                                    we've established ourselves as a trusted partner for businesses across various
+                                    industries. Our commitment to excellence and unwavering focus on results set us apart.
+                                    Whether you're a small startup or an established corporation, we have the expertise to
+                                    transform your advertising efforts into tangible business growth. Discover what makes us
+                                    the preferred choice for companies seeking exceptional advertising solutions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="advert-banner-section">
+                <img src="./images/advert-banner.jpg" alt="advert-banner" class="advert-banner">
+            </section>
+          </main>
 
           <footer>
             <div class="container">
@@ -121,11 +181,17 @@
             </div>
           </footer>
         
-
-        <script src="./js/materialize.min.js"></script>
         <script src="./js/jquery.min.js"></script>
+        <script src="./js/materialize.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         
         <script>
+            $(document).ready(function(){
+                // Initialize Sidenav
+                $('.sidenav').sidenav();
+            });
+
+            // Scroll functions
             $(window).scroll(function () {
                 $('nav.main-nav').toggleClass('scrolled-nav', $(this).scrollTop() > 50)
             })
@@ -134,6 +200,9 @@
             }
             var copyrightYear = new Date().getFullYear();
             document.querySelector("#copyrightYear").innerText = copyrightYear;
+            
+            // Initialize AOS
+            AOS.init();
         </script>
     </body>
 </html>

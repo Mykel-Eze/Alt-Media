@@ -210,7 +210,9 @@ h4.footer-title {
     margin-top: 30px;
     padding: 15px 0;
 }
-
+.footer-links-side img {
+    width: 19px;
+}
 
 @media (max-width: 992px) {
   .visible-xs-sm {
@@ -230,5 +232,11 @@ h4.footer-title {
   }
   .hidden-xs {
     display: none !important;
+  }
+
+  .footer-contents-wrapper.flex-div {
+    flex-direction: column;
+    align-items: inherit;
+    padding: 0 15px;
   }
 }

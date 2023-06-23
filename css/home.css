@@ -1,7 +1,7 @@
 /**** Home Style ****/
 section#home {
     width: 100%;
-    height: 90vh;
+    height: 96vh;
     min-height: 600px;
     background-color: #333;
     background-image: url('../images/home-banner.jpg');
@@ -34,14 +34,24 @@ section#home::before {
 .home-title-desc {
     letter-spacing: -1px;
 }
+#home h1 span {
+    animation: colorChange 15s 5s infinite linear;
+}
+
+@keyframes colorChange {
+    0% { color: #F56400; }
+    33% { color: #FCA700; }
+    66% { color: #0C9D92; }
+    100% { color: #F56400; }
+}
 
 @media(max-width: 992px) {}
 
 @media(max-width: 600px) {}
 /**** end of Home Style ****/
 
-/**** Home-Desc Style ****/
-section#home-desc {
+/**** About Style ****/
+section#about {
     padding: 50px 0;
     font-size: 22px;
 }
@@ -49,16 +59,31 @@ section#home-desc {
 @media(max-width: 992px) {}
 
 @media(max-width: 600px) {
-    section#home-desc {
+    section#about {
         font-size: 18px;
     }
 }
-/**** end of Home-Desc Style ****/
+/**** end of About Style ****/
 
-/**** About Style ****/
-section#about {
+/**** Empower-Brands Style ****/
+section#empower-brands {
     padding: 30px 0;
     font-size: 17px;
+}
+.doodle-background {
+    position: relative;
+}
+.doodle-background::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../images/doddle.jpg");
+    background-size: 100px;
+    background-repeat: repeat;
+    opacity: 0.1;
 }
 .grid-wrapper {
     display: grid;
@@ -78,7 +103,83 @@ h4.section-title {
         grid-template-columns: 100%;
     }
 }
-/**** end of About Style ****/
+/**** end of Empower-Brands Style ****/
+
+/**** Services Style ****/
+section#services {
+    padding: 20px 0 40px;
+}
+
+@media(min-width: 601px) {
+    .section-content-wrapper .grid-wrapper:nth-child(odd) {
+        direction: rtl;
+    }
+    .section-content-wrapper .grid-wrapper .txt-side{
+        width: 80%;
+    }
+}
+
+@media(max-width: 992px) {}
+
+@media(max-width: 600px) {
+    .grid-wrapper {
+        grid-template-columns: 100%;
+    }
+    section#services h4.section-title {
+        margin-top: 0;
+        font-size: 2.5rem;
+    }
+    .section-content-wrapper .grid-wrapper:not(:last-child){
+        margin-bottom: 30px;
+    }
+    h1.home-title.black-txt.center {
+        font-size: 50px;
+    }
+}
+/**** end of Services Style ****/
+
+/**** Why-Choose-Us Style ****/
+section#why-choose-us {
+    padding: 20px 0 40px;
+}
+.wcu-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    max-width: 940px;
+    margin: 50px auto 30px;
+}
+.wcu-block {
+    text-align: center;
+    -webkit-box-shadow: 1px 1px 2px 3px rgba(84, 115, 125, 0.1);
+    box-shadow: 1px 1px 2px 3px rgba(84, 115, 125, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    font-size: 18px;
+}
+.wcu-img-wrapper {
+    margin-bottom: 30px;
+}
+.wcu-img {
+    width: 64px;
+}
+
+@media(max-width: 992px) {
+    .wcu-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media(max-width: 600px) {
+    .wcu-wrapper {
+        grid-template-columns: 100%;
+    }
+    section#why-choose-us h1.home-title.black-txt.center {
+        font-size: 45px;
+    }
+}
+/**** end of Why-Choose-Us Style ****/
 
 /**** Advert-Banner-Section Style ****/
 img.advert-banner {
